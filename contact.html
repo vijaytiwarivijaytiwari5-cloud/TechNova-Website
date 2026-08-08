@@ -1,104 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <style>
-        
-*{margin:0; padding:0; box-sizing:border-box; }
-h1,h2{text-align: center;}
-.pj{text-align:center;}
-h1{font-size: 36px; font-weight: bold; color: #333; margin-bottom: 5px;}
-
-nav ul {list-style-type: none; text-align: center; background-color: #333; padding: 5px;}
-
-nav li{display: inline-block; margin: 15px;}
-nav a{text-decoration: none; color: white; font-family: sans-serif;}
-form{max-width: 600px; margin:40px auto; font-family: sans-serif;}
-fieldset{border: 1px solid #ccc; border-radius: 12px; padding:30px; margin-bottom:20x;  background-color: white; box-shadow: 0 4px 15px rgba(0, 0, 0,0, 0.5);}
-legend{font-weight: bold; padding: 0 10px; color:#333}
-fieldset p{display:flex; justify-content:space-between; max-width: 400px; margin-bottom:12px;}
-.form-row input[type="text"],
-.form-row input[type="email"],
-.form-row input[type="number"] {width: 260px; padding: 9px;  border:1px solid #ccc ; border-radius: 4px; font-size:14px; background-color: white;}
-body{background-color: #f4f6f9;font-family:sans-serif ;}
-footer{text-align: center; background-color: #c70e0e; color: white; margin-bottom: 0px; padding: 20px; }
-
-fieldset input[type="radio"]{width: auto;margin-right:6px}
-textarea{width:100%; max-width:100%; height: 120px; padding:10px; font-family:sans-serif; font-size:14px;  margin-top:8px;}
-
-button[type="submit"]{display:block;width:100%; background-color: #17b346;color:rgb(15, 15, 15);padding:12px;border:non;border-radius: 6px; font-size:bold; cursor:pointer; margin-top:15px; transition:background-color 0.3s ease;}
-
-button[type="reset"]{display:block;width:100%; background-color: #333;color:white;padding:12px;border:non;border-radius: 6px; font-size:bold; cursor:pointer; margin-top:15px; transition:background-color 0.3s ease;}
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Contact TechNova Solutions for sales and support inquiries." />
+  <title>Contact — TechNova Solutions</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-     <header>
-        <h1>
-            TechNova Solution
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">TechNova Solutions</a>
 
-        </h1>
-        <p class="pj">Innovating the Future of Business</p>
+      <input id="nav-toggle-contact" type="checkbox" class="nav-toggle" aria-hidden="true">
+      <label for="nav-toggle-contact" class="nav-toggle-label" aria-hidden="true">
+        <span></span>
+      </label>
 
-    </header>
-         <nav>
+      <nav class="site-nav" aria-label="Main navigation">
         <ul>
-        <li><a href="index.html">Home</a></li>
-<li><a href="about.html">About Us</a></li>
-<li><a href="services.html">Our Services</a></li>
-<li><a href="contact.html" target="_blank">Contact Support</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
       </nav>
- <main>
-    <section>
-        <h2>Get in Touch with Us</h2>
-        <br>
-        <br>
-        <p class="pj">Fill out the form below to connect directly with our tech experts.</p>
-        <form action="#" method="post">
-            
-            <fieldset>
-                <legend>User Identity</legend>
-                <p class="form-row">Full Name: <input type="text" name="fullname" class="align"> </p>
-                <p class="form-row">Email : <input type="email" name="email" class="align"> </p>
-                <p class="form-row">Mobile Number : <input type="number" name="phone no" class="align"> </p>
-           
-            </fieldset>
-            
-            <br>
-            <br>
-            <br>
-            <br>
-            <fieldset>
-                <legend>Query Type</legend>
-               <p><bold> Select the Service you want: </bold></p>
-               <br>
-            <label>Tech Support <input type="radio" name="Service_type" value="Tech Support"> </Label>
-             <label> Business Consulting  <input type="radio" name="Service_type" value="Consulting"></label>
+    </div>
+  </header>
 
-            
-            </fieldset>
-    <br>
-    <br>
-            <br>
-            <h3>Message Box</h3>
-            <p>Description<textarea row="100" cols="50"></textarea></p>
- <button type="submit" >Submit</button>
- <button type="reset">Reset</button>
+  <main class="container contact-page">
+    <h1>Contact Us</h1>
+    <p class="lead">Send us a message and we'll get back to you shortly.</p>
 
-        </form>
-    </section>
+    <form class="contact-form" action="#" method="post" novalidate>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
 
-     <footer>
-            <p>&copy; 2026 TechNova Solutions. All rights reserved. | Designed according to W3C Semantic Standards.</p>  </footer> </main>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 TechNova Solutions. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
